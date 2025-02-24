@@ -1,4 +1,4 @@
-# OpenUI
+# OpenUI  for test release
 
 <p align="center">
   <img src="./assets/openui.png" width="150" alt="OpenUI" />
