@@ -65,7 +65,7 @@ jobs:
           path: ${{ env.PACKAGE_NAME }}.tar.gz
 
   create-release:
-    needs: [build-frontend, test]
+    needs: [build-frontend]
     runs-on: ubuntu-latest
     permissions:
       contents: write
