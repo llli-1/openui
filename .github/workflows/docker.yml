@@ -75,11 +75,12 @@ jobs:
         with:
           name: ${{ env.PACKAGE_NAME }}
 
+      - name: Get short SHA
+        id: vars
+        run: echo "SHORT_SHA=${GITHUB_SHA::7}" >> $GITHUB_ENV
+
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          name: Release ${{ github.sha }}
-          tag_name: ${{ github.sha }}
-          body: Auto-generated code package
-          files: |
-            ${{ env.PACKAGE_NAME }}.tar.gz
+          name: Release ${{ env.SHORT_SHA }}
+          tag_name: ${{ env}}
